@@ -1,11 +1,11 @@
-package br.com.solari.infrastructure.gateway.database.jpa;
+package br.com.solari.infrastructure.gateway;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class ClientJpaGateway /*implements ClientGateway*/ {
+public class OrderGatewayImpl /*implements ClientGateway*/ {
 /*
   private final ClientRepository clientRepository;
   private static final String FIND_ERROR_MESSAGE = "User with CPF=[%s] not found.";

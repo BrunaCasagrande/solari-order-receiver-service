@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="solari-client-service" />
+        <module name="solari-order-receiver-service" />
       </profile>
     </annotationProcessing>
   </component>

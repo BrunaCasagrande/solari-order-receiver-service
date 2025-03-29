@@ -1,4 +1,4 @@
-package br.com.solari.infrastructure.gateway.database.jpa.entity;
+package br.com.solari.infrastructure.gateway.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;

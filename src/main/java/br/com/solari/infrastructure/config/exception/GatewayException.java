@@ -1,4 +1,4 @@
-package br.com.solari.infrastructure.exception;
+package br.com.solari.infrastructure.config.exception;
 
 import lombok.Getter;
 

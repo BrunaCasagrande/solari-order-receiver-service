@@ -1,6 +1,6 @@
 package br.com.solari.application.domain;
 
-import br.com.solari.infrastructure.exception.GatewayException;
+import br.com.solari.infrastructure.config.exception.GatewayException;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;

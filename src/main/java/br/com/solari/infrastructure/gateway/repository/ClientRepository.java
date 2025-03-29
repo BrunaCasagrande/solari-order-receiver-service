@@ -1,6 +1,6 @@
-package br.com.solari.infrastructure.gateway.database.jpa.repository;
+package br.com.solari.infrastructure.gateway.repository;
 
-import br.com.solari.infrastructure.gateway.database.jpa.entity.ClientEntity;
+import br.com.solari.infrastructure.gateway.entity.ClientEntity;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

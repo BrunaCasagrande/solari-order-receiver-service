@@ -1,4 +1,4 @@
-package br.com.solari.infrastructure.exception;
+package br.com.solari.application.usecase.exception;
 
 import static java.lang.String.format;
 
