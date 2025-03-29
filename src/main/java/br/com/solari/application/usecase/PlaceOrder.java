@@ -23,6 +23,7 @@ public class PlaceOrder {
                         request.getClientId(),
                         request.getPaymentData());
 
+        //TODO esse SYSO pode ser substituido no futuro por uma inclusao na base de dados por motivos de auditoria
         System.out.println("### Pedido criado: " + buildDomain.toString());
 
         orderProducer.sendMessage(buildDomain);
