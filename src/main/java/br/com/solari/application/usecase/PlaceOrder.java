@@ -15,12 +15,18 @@ public class PlaceOrder {
         this.orderProducer = orderProducer;
     }
 
-    public Order createOrderAndSendToKafka(Order order) {
+    public Order createOrderAndSendToKafka(Order request) {
 
-        System.out.println("### Pedido criado: " + order.toString());
+        final var buildDomain =
+                Order.createOrder(
+                        request.getProducts(),
+                        request.getClientId(),
+                        request.getPaymentData());
 
-        orderProducer.sendMessage(order);
+        System.out.println("### Pedido criado: " + buildDomain.toString());
 
-        return order;
+        orderProducer.sendMessage(buildDomain);
+
+        return buildDomain;
     }
 }
