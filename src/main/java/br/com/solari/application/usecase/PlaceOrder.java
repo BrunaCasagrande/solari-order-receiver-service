@@ -1,0 +1,26 @@
+package br.com.solari.application.usecase;
+
+import br.com.solari.application.domain.Order;
+import br.com.solari.infrastructure.event.OrderProducer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class PlaceOrder {
+
+    private final OrderProducer orderProducer;
+
+    @Autowired
+    public PlaceOrder(OrderProducer orderProducer) {
+        this.orderProducer = orderProducer;
+    }
+
+    public Order createOrderAndSendToKafka(Order order) {
+
+        System.out.println("### Pedido criado: " + order.toString());
+
+        orderProducer.sendMessage(order);
+
+        return order;
+    }
+}
