@@ -18,6 +18,4 @@ public class PaymentData {
 
   private String creditCardNumber;
 
-  private String pixKey;
-
 }

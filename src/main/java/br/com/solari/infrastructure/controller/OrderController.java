@@ -2,6 +2,7 @@ package br.com.solari.infrastructure.controller;
 
 import br.com.solari.application.domain.Order;
 import br.com.solari.application.usecase.PlaceOrder;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +23,7 @@ public class OrderController {
   @Autowired private PlaceOrder placeOrder;
 
   @PostMapping("/order")
-  public ResponseEntity<Order> sendPedido(@Valid @RequestBody final Order request) {
+  public ResponseEntity<Order> sendPedido(@Valid @RequestBody final Order request) throws JsonProcessingException {
 
     Order orderPlaced = placeOrder.createOrderAndSendToKafka(request);
 

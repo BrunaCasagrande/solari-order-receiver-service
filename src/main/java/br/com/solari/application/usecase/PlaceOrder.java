@@ -2,6 +2,7 @@ package br.com.solari.application.usecase;
 
 import br.com.solari.application.domain.Order;
 import br.com.solari.infrastructure.event.OrderProducer;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +16,7 @@ public class PlaceOrder {
         this.orderProducer = orderProducer;
     }
 
-    public Order createOrderAndSendToKafka(Order request) {
+    public Order createOrderAndSendToKafka(Order request) throws JsonProcessingException {
 
         final var buildDomain =
                 Order.createOrder(
