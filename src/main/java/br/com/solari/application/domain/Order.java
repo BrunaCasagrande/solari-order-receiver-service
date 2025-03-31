@@ -28,22 +28,22 @@ public class Order {
   @NotNull(message = "products is required")
   private Map<Integer, Integer> products;
 
-  @NotNull(message = "clientId is required")
-  private Integer clientId;
+  @NotNull(message = "cpf is required")
+  private String cpf;
 
   @NotNull(message = "paymentData is required")
   private PaymentData paymentData;
 
   public static Order createOrder(
           final Map<Integer, Integer> products,
-          final Integer clientId,
+          final String cpf,
           final PaymentData paymentData) {
 
     final var order =
             Order.builder()
                     .id(UUID.randomUUID().toString())
                     .products(products)
-                    .clientId(clientId)
+                    .cpf(cpf)
                     .paymentData(paymentData)
                     .build();
 

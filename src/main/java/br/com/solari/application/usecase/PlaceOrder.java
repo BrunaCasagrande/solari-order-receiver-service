@@ -21,7 +21,7 @@ public class PlaceOrder {
         final var buildDomain =
                 Order.createOrder(
                         request.getProducts(),
-                        request.getClientId(),
+                        request.getCpf(),
                         request.getPaymentData());
 
         //TODO esse SYSO pode ser substituido no futuro por uma inclusao na base de dados por motivos de auditoria
