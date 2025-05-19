@@ -2,6 +2,7 @@ package br.com.solari.application.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Getter
@@ -13,7 +14,7 @@ import lombok.*;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PaymentData {
 
-  @NotBlank(message = "paymentMethod is required")
+  @NotNull(message = "paymentMethod is required")
   private PaymentMethod paymentMethod;
 
   private String creditCardNumber;
